@@ -1,24 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import ProductCard from './ProductCard';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <div className="App" style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', padding: '20px' }}>
+      <ProductCard
+        name="smartphone"
+        price={1999}
+        imageUrl="https://picsum.photos/250/150"
+      />
+      <ProductCard
+        name="T-shirt"
+        price={200}
+        imageUrl="https://picsum.photos/250/150"
+      />
+      <ProductCard
+        name="pizza"
+        price={24}
+        imageUrl="https://picsum.photos/250/150"
+      />
     </div>
   );
 }
